@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inscription</title>
+<link rel="StyleSheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="Formulaire.css">
+<script type="text/javascript" src="jquery-2.1.4.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</head>
+<header>
+	<img id="imgLogo" alt="logo" src="images/logo.jpg">
+</header>
+<nav>
+	<ul id="mainMenu">
+		<li id="menu1"><a class="lienMenu" href="#">Nos Voyages</a>
+			<ul>
+				<li id="menu1-1"><a class="lienMenu" href="#">Europe</a></li>
+				<li id="menu1-2"><a class="lienMenu" href="#">Asie</a></li>
+				<li id="menu1-3"><a class="lienMenu" href="#">Amérique du
+						Sud</a></li>
+			</ul></li>
+		<li id="menu2"><a class="lienMenu" href="#">Votre Budget</a>
+			<ul>
+				<li id="menu2-1"><a class="lienMenu" href="#">> 5000€</a></li>
+				<li id="menu2-2"><a class="lienMenu" href="#">entre 2000€
+						et 5000€</a></li>
+				<li id="menu2-3"><a class="lienMenu" href="#"><2000€</a></li>
+			</ul></li>
+		<li id="menu3"><a class="lienMenu" href="#">Nos Formules</a>
+			<ul>
+				<li id="menu3-1"><a class="lienMenu" href="#">Tout compris</a></li>
+				<li id="menu3-2"><a class="lienMenu" href="#">Voyage +
+						Hébergement</a></li>
+				<li id="menu3-3"><a class="lienMenu" href="#">Voyage seul</a></li>
+			</ul></li>
+	</ul>
+	<div id="inscription"><a id="lienInscription" href="index.html">Accueil</a></div>
+</nav>
+<body>
+	<div id="containerFormulaire">
+			<form action="http://192.168.1.16:8080/echo/EchoServlet" method="post"
+			target="_blank" autocomplete="on">
+			<fieldset>
+				<legend>Identité</legend>
+				<label for="nom">Nom : </label>
+				<select id="civilite"
+					name="civilite" required>
+					<option value="mr">Mr.</option>
+					<option value="mme">Mme.</option>
+					<option value="mlle">Mlle.</option>
+				</select> 
+					<input id="nom" name="nom"
+					placeholder="Nom" required />*</br> <label for="prenom">Prénom : </label><input
+					id="prenom" name="prenom" placeholder="Prénom" required />*</br> <label
+					for="date">Date de naissance : </label><input id="date" name="date"
+					type="date" placeholder="jj/mm/aaaa"></br>
+			</fieldset>
+			<fieldset>
+				<legend>Adresse</legend>
+				<label for="rue">Adresse : </label><input id="rue" name="rue"
+					placeholder="N°, rue, bd., av., ..." required />*</br> <label
+					for="complement">Compléments : </label><input id="complement"
+					name="complement"
+					placeholder="Immeuble, porte, étage, n° appartement, ..."></br>
+				<label for="cp">Code postal : </label><input id="cp" name="cp"
+					placeholder="Code postal" required>*</br> <label for="ville">Ville : </label><input
+					id="ville" name="ville" placeholder="ville" required>*</br>
+			</fieldset>
+			<button type="submit">Envoyer</button>
+			<button type="reset">Annuler</button>
+		</form>
+	</div>
+</body>
+<footer>
+	<div class="lienFooter">
+		<a>Nous contacter</a>
+	</div>
+	<div class="lienFooter">
+		<a>Mentions légales</a>
+	</div>
+</footer>
+</html>
